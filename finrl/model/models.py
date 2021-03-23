@@ -81,8 +81,7 @@ class DRLAgent:
             test_obs, rewards, dones, info = test_env.step(action)
             if i == (len(environment.df.index.unique()) - 2):
               account_memory = test_env.env_method(method_name="save_asset_memory")
-              actions_memory = test_env.env_method(method_name="save_action_memory")
-              print("hit i"+i)               
+              actions_memory = test_env.env_method(method_name="save_action_memory")                         
             if dones[0]:
                 print("hit end!")
                 break
